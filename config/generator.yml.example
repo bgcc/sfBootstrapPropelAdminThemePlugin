@@ -1,0 +1,66 @@
+generator:
+  class: sfPropelGenerator
+  param:
+    model_class:           ModelName
+    theme:                 bootstrap
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          model_name
+    with_propel_route:     1
+    actions_base_class:    sfActions
+
+    config:
+      actions:              ~
+
+      fields:
+        field1:             { label: Field 1 }
+        field2:             { label: Field 2, help: 'I am a help message: HELP!' }
+        field3:             { label: Field 3 }
+        field4:             { label: Field 4 }
+        field5:             { label: Field 5 }
+
+      list:
+        title:              Title for the list view
+        max_per_page:       3                                                                                           # Override max_per_page from settings.yml
+        max_per_pages:      [ 1, 2, 3, 4, 5 ]                                                                           # Override max_per_pages from settings.yml
+        display:            [ field1, field2, field3, field4, field5 ]
+        actions:                                                                                                        # Override list_actions from settings.yml
+          _new:       ~
+          sort:       { label: Sort, action: sort, params: { icon_class: 'fa fa-sort', class: 'btn btn-default' }}      # Sample for custom list action
+        #batch_actions:                                                                                                 # Override batch_actions from settings.yml
+        #  _delete:    ~
+        #object_actions:                                                                                                # Override object_actions from settings.yml
+        #  _edit:      ~
+        #  _delete:    ~
+        #  _move_up:   ~
+        #  _move_down: ~
+
+      filter:
+        display:            [ field1, field2, field3, field4, field5 ]
+
+      form:
+        tabs:                                                                                                           # Example: Tabs with multiple panels
+          tab1:
+            label:    First Tab
+            display:  [ Fieldset 1, NULL ]
+          tab2:
+            label:    Second Tab
+            display:  [ Fieldset 2 ]
+        display:
+          Fieldset 1: [ field1, field2 ]
+          NULL:       [ field3, field4 ]
+          Fieldset 2: [ field5 ]
+
+        #display:                                                                                                       # Example: One panel without header
+          #NULL:               [ field1, field2, field3, field4, field5 ]
+
+        #display:
+          #Fieldset 1:         [ field1, field2, field3, field4, field5 ]                                               # Example: One panel with header
+
+      edit:
+        title:              Title for the edit page
+
+      new:
+        title:              Title for the new page

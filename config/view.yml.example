@@ -1,0 +1,22 @@
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Project name
+    language:     en
+    robots:       noindex, nofollow
+
+  stylesheets:
+    - //netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css
+    - //netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css
+    - //netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css
+    - /sfBootstrapPropelAdminThemePlugin/css/theme.css: { position: last }
+
+  javascripts:
+    - //ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js
+    - //netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js
+    - /sfBootstrapPropelAdminThemePlugin/js/theme.js: { position: last }
+
+  has_layout:     true
+  layout:         %sf_plugins_dir%/sfBootstrapPropelAdminThemePlugin/templates/layout

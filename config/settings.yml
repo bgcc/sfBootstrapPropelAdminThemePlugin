@@ -1,0 +1,12 @@
+all:
+  sfBootstrapPropelAdminTheme:
+    title:                    Project name
+    max_per_page:             10
+    max_per_pages:            [ 10, 25, 50, 100 ]
+    form_actions:             { _save: null, _list: null, _delete: null, _previous: null, _next: null }
+    new_actions:              { _save: null, _list: null }
+    edit_actions:             { _save: null, _list: null, _delete: null, _previous: null, _next: null }
+    object_actions_sortable:  { _edit: null, _move_up: null, _move_down: null, _delete: null }
+    object_actions:           { _edit: null, _delete: null }
+    list_actions:             { _new: null }
+    batch_actions:            { _delete: null }

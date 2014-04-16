@@ -1,0 +1,19 @@
+generator:
+  class: sfPropelGenerator
+  param:
+##CONFIG##
+
+    config:
+      actions:              ~
+
+      fields:               ~
+
+      list:                 ~
+
+      filter:               ~
+
+      form:                 ~
+
+      new:                  ~
+
+      edit:                 ~

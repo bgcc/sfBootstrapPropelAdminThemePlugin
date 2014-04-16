@@ -1,0 +1,64 @@
+/* Move symfony debug bar to the bottom of the page */
+#sfWebDebugBar[id] {
+    position: absolute !important;
+    bottom: 0;
+    top: auto;
+}
+
+/* Pagination in list */
+tfoot .pagination {
+    margin: 0;
+}
+
+/* Filter label to the left */
+.filter.form-horizontal .control-label {
+    text-align: left;
+    padding-left: 0 !important;
+}
+
+.filter.form-horizontal .form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.filter.form-horizontal .col-sm-8 {
+    padding-left: 0 !important;
+}
+
+.input-inline {
+    padding-top: 7px;
+    margin: 0;
+}
+
+/* Error list */
+.alert .error_list {
+    padding: 0;
+}
+
+.form-tab-pane {
+    padding-top: 20px;
+}
+
+.form-error-message {
+    padding-top: 7px;
+    margin-bottom: 7px;
+}
+
+/* Error list item */
+.alert .error_list li {
+    list-style-type: none;
+}
+
+/* Page title */
+.main h1.pull-left {
+    margin-top: 0;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.pagination-sm>li>a, .pagination-sm>li>span {
+    padding: 1px 10px;
+    font-size: 12px;
+}

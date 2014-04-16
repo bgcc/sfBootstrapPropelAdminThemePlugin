@@ -53,9 +53,9 @@ Setup
 
 Bonus
 -----
-  * Check the `signinSuccess.php` in `plugins/sfBootstrapPropelAdminThemePlugin/modules/theme/templates` for a nice login page.
+  * Check the `signinSuccess.php` in `plugins/sfBootstrapPropelAdminThemePlugin/modules/theme/templates` for a nice login page. Copy the content to the template of your signin action and modify it if it's necessary.
 
-  * Modify the `view.yml` of your login module and add
+  * Modify the `view.yml` of the module where you sigin action is placed and add
     ``` yaml
     signinSuccess:
         layout:       %sf_plugins_dir%/sfBootstrapPropelAdminThemePlugin/templates/login

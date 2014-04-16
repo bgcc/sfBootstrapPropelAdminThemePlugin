@@ -3,7 +3,7 @@ sfBootstrapPropelAdminThemePlugin
 
 Description
 -----------
-The `sfBootstrapPropelAdminThemePlugin` is a symfony 1.4 plugin that provides a Twitter Bootstrap 3.x base admin theme for Propel 1.6+.
+The `sfBootstrapPropelAdminThemePlugin` is a symfony 1.4 plugin that provides a Twitter Bootstrap 3.x base admin theme for Propel 1.5+.
 
 Requirements
 ------------

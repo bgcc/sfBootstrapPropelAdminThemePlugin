@@ -5,6 +5,7 @@
     "description": "A bootstrap based admin generator theme for symfony 1 with propel 1.6+",
     "keywords": ["symfony", "admin", "generator", "bootstrap"],
     "require": {
-        "composer/installers": "~1.0"
+        "composer/installers": "~1.0",
+        "propel/sf-propel-o-r-m-plugin": "*"
     }
 }

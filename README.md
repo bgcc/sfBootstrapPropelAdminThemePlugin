@@ -7,7 +7,7 @@ The `sfBootstrapPropelAdminThemePlugin` is a symfony 1.4 plugin that provides a 
 
 Requirements
 ------------
-  * symfony 1.2 / 1.3 / 1.4
+  * symfony 1.4
   * [Propel ORM](https://github.com/propelorm/sfPropelORMPlugin)
 
 Installation via Composer

@@ -1,6 +1,11 @@
 sfBootstrapPropelAdminThemePlugin
 ======================
 
+[![License](https://poser.pugx.org/bgcc/sf-bootstrap-propel-admin-theme-plugin/license.png)](https://packagist.org/packages/bgcc/sf-bootstrap-propel-admin-theme-plugin)
+[![Total Downloads](https://poser.pugx.org/bgcc/sf-bootstrap-propel-admin-theme-plugin/downloads.png)](https://packagist.org/packages/bgcc/sf-bootstrap-propel-admin-theme-plugin)
+[![Monthly Downloads](https://poser.pugx.org/bgcc/sf-bootstrap-propel-admin-theme-plugin/d/monthly.png)](https://packagist.org/packages/bgcc/sf-bootstrap-propel-admin-theme-plugin)
+[![Daily Downloads](https://poser.pugx.org/bgcc/sf-bootstrap-propel-admin-theme-plugin/d/daily.png)](https://packagist.org/packages/bgcc/sf-bootstrap-propel-admin-theme-plugin)
+
 Description
 -----------
 The `sfBootstrapPropelAdminThemePlugin` is a symfony 1.4 plugin that provides a Twitter Bootstrap 3.x based admin theme for Propel 1.5+.

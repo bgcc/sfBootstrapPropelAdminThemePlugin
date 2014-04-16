@@ -1,0 +1,10 @@
+{
+    "name": "bgcc/sf-bootstrap-propel-admin-theme-plugin",
+    "type": "symfony1-plugin",
+    "license": "MIT",
+    "description": "A bootstrap based admin generator theme for symfony 1 with propel 1.6+",
+    "keywords": ["symfony", "admin", "generator", "bootstrap"],
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}

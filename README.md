@@ -28,9 +28,9 @@ Installation via Git
         $ git submodule update --init --recursive
 
   * Enable the plugin in your `/config/ProjectConfiguration.class.php`
-``` php
- $this->enablePlugins('sfBootstrapPropelAdminThemePlugin');
-```
+    ``` php
+    $this->enablePlugins('sfBootstrapPropelAdminThemePlugin');
+    ```
 
   * Publish assets
 
@@ -40,6 +40,23 @@ Installation via Git
 
         $ ./symfony cc
 
-Usage
+Setup
 -----
-Coming soon...
+  * See the config folder of the plugin for examples of `view.yml` (for the application) and `generator.yml`.
+
+  * Enable the module in your `application_name/config/settings.yml`
+    ``` yaml
+    all:
+      .settings:
+        enabled_modules:        [ theme ]
+    ```
+
+Bonus
+-----
+  * Check the `signinSuccess.php` in `plugins/sfBootstrapPropelAdminThemePlugin/modules/theme/templates` for a nice login page.
+
+  * Modify the `view.yml` of your login module and add
+    ``` yaml
+    signinSuccess:
+        layout:       %sf_plugins_dir%/sfBootstrapPropelAdminThemePlugin/templates/login
+    ```

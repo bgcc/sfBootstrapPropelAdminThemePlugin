@@ -28,7 +28,10 @@
                         [?php if ($pager->haveToPaginate()): ?]
                             [?php echo __('(page %%page%%/%%nb_pages%%)', array('%%page%%' => $pager->getPage(), '%%nb_pages%%' => $pager->getLastPage()), 'sf_admin') ?]
                         [?php endif; ?]
+
+                        <?php if ($this->configuration->getValue('list.batch_actions')): ?>
                         | [?php include_partial('<?php echo $this->getModuleName() ?>/chosen_datasets', array('helper' => $helper)) ?]
+                        <?php endif; ?>
                     </div>
 
                     [?php if ($pager->haveToPaginate()): ?]
@@ -55,6 +58,7 @@
     </table>
 </div>
 
+<?php if ($this->configuration->getValue('list.batch_actions')): ?>
 <script type="text/javascript">
 function checkAll()
 {
@@ -96,4 +100,5 @@ function checkOne(id)
     });
 }
 </script>
+<?php endif; ?>
 [?php endif; ?]

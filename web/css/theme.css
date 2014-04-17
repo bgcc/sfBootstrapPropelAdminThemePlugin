@@ -1,6 +1,5 @@
 /* Move symfony debug bar to the bottom of the page */
 #sfWebDebugBar[id] {
-    position: absolute !important;
     bottom: 0;
     top: auto;
 }

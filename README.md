@@ -86,6 +86,10 @@ Setup
         enabled_modules:        [ theme ]
     ```
 
+  * Generate a propel admin module with the bootstrap theme
+
+        $ ./symfony propel:generate-admin --theme="bootstrap" app_name ModelName
+
 Bonus
 -----
   * Check the `signinSuccess.php` in `plugins/sfBootstrapPropelAdminThemePlugin/modules/theme/templates` for a nice login page. Copy the content to the template of your signin action and modify it if it's necessary.

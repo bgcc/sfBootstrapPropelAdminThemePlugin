@@ -10,6 +10,10 @@
             [?php $attributes = $attributes instanceof sfOutputEscaper ? $attributes->getRawValue() : $attributes; ?]
             [?php $options = $form[$name]->getWidget()->getOptions(); ?]
 
+            [?php if (stristr(get_class($form[$name]->getWidget()), 'checkbox')): ?]
+                <div class="checkbox">
+            [?php endif; ?]
+
             [?php if (
                 !(
                     stristr(get_class($form[$name]->getWidget()), 'radio') ||
@@ -24,6 +28,10 @@
             [?php endif; ?]
 
             [?php echo $form[$name]->render($attributes); ?]
+
+            [?php if (stristr(get_class($form[$name]->getWidget()), 'checkbox')): ?]
+                </div>
+            [?php endif; ?]
 
             [?php if ($help || $help = $form->getWidgetSchema()->getHelp($name)): ?]
                 <span class="help-block">[?php echo __($help, array(), '<?php echo $this->getI18nCatalogue() ?>'); ?]</span>

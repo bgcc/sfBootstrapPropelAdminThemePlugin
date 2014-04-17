@@ -17,22 +17,22 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown<?php in_array($module, array('article', 'article_category')) and print ' active'; ?>">
-                        <a id="dropdown1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Artikel <b class="caret"></b></a>
+                        <a id="dropdown1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><?php echo __('Articles'); ?> <b class="caret"></b></a>
 
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown1">
                             <li role="presentation">
-                                <?php echo link_to('Artikel Kategorien', '@article_category', array('role' => 'menuitem', 'tabindex' => '-1', )); ?>
-                                <?php echo link_to('Artikel', '@article', array('role' => 'menuitem', 'tabindex' => '-1', )); ?>
+                                <?php echo link_to('Article Categories', '@article_category', array('role' => 'menuitem', 'tabindex' => '-1', )); ?>
+                                <?php echo link_to('Articles', '@article', array('role' => 'menuitem', 'tabindex' => '-1', )); ?>
                             </li>
                         </ul>
 
                     </li>
 
-                    <li><a href="#">Einstellungen</a></li>
+                    <li><a href="#">Settings</a></li>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><?php echo link_to('<i class="fa fa-sign-out"></i> ' . __('Abmelden'), '@sf_guard_signout', 'confirm=' . __('Do you really want to logout?', array(), 'sf_admin')); ?></li>
+                    <li><?php echo link_to('<i class="fa fa-sign-out"></i> ' . __('Logout'), '@sf_guard_signout', 'confirm=' . __('Do you really want to logout?', array(), 'sf_admin')); ?></li>
                 </ul>
             </div>
         </div>

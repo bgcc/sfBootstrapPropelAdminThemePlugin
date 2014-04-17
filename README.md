@@ -11,6 +11,20 @@ Description
 The `sfBootstrapPropelAdminThemePlugin` is a [symfony 1.4](https://github.com/bgcc/symfony1) plugin that provides a [Bootstrap 3](https://github.com/twbs/bootstrap) based admin theme for [Propel 1.5+](https://github.com/propelorm/sfPropelORMPlugin).
 All icons are replaced with [Font Awesome](https://github.com/FortAwesome/Font-Awesome).
 
+Screenshots
+-----------
+Available Screenshots:
+  * Login
+  * Navigation
+  * List
+  * Responsive List
+  * Form with tabs (first tab selected)
+  * Form with tabs (second tab selected)
+  * Form with tabs and error (second tab selected)
+  * Responsive Form
+
+View the gallery under [http://imgur.com/a/Smu3G](http://imgur.com/a/Smu3G).
+
 Features
 ------------
   * Full features from admin15 theme of sfPropelORMPlugin
@@ -81,3 +95,8 @@ Bonus
     signinSuccess:
         layout:       %sf_plugins_dir%/sfBootstrapPropelAdminThemePlugin/templates/login
     ```
+
+Contribution
+-----
+  * Issues and pull requests are welcome.
+  * If you have a feature request or question feel free to open an issue.

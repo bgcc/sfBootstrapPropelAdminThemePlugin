@@ -9,7 +9,7 @@
         <?php elseif ('_move_down' == $name): ?>
             <?php echo $this->addCredentialCondition('[?php echo $helper->linkToMoveDown($'.$this->getSingularName().', '.$this->asPhp($params).') ?]', $params) ?>
         <?php else: ?>
-            <?php echo $this->addCredentialCondition($this->getLinkToAction($name, $params, true), $params) ?>
+            <?php echo $this->addCredentialCondition('[?php echo $helper->linkToListAction($'.$this->getSingularName().', '.$this->asPhp($params).') ?]', $params) ?>
         <?php endif; ?>
     <?php endforeach; ?>
 </td>

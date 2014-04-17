@@ -100,6 +100,17 @@ abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper 
         return link_to(($link_params['icon_class'] ? '<i class="' . $link_params['icon_class'] . '"></i> ' : '') . '<span class="hidden-xs hidden-sm">' . __($params['label'], array(), 'sf_admin') . '</span>', $action, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => $link_params['class']));
     }
 
+    public function linkToListAction($object, $params)
+    {
+        $link_params = $params['params'];
+
+        if (empty($link_params['class'])) {
+            $link_params['class'] = 'btn btn-default btn-xs';
+        }
+
+        return link_to(($link_params['icon_class'] ? '<i class="' . $link_params['icon_class'] . '"></i> ' : '') . __($params['label'], array(), 'sf_admin'), '<?php echo $this->params['moduleName'] ?>/' . $params['action'] . '?<?php echo $this->getPrimaryKeyUrlParams('$object', true); ?>, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => $link_params['class']));
+    }
+
     public function linkToPrevious($object, $params)
     {
         if (!$object->isNew()) {

@@ -14,6 +14,7 @@
                 !(
                     stristr(get_class($form[$name]->getWidget()), 'radio') ||
                     stristr(get_class($form[$name]->getWidget()), 'checkbox') ||
+                    stristr(get_class($form[$name]->getWidget()), 'select2') ||
                     (isset($options['renderer_class']) && stristr($options['renderer_class'], 'radio')) ||
                     (isset($options['renderer_class']) && stristr($options['renderer_class'], 'checkbox'))
                 )

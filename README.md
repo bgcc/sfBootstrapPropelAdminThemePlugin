@@ -88,7 +88,7 @@ Setup
 
   * Generate a propel admin module with the bootstrap theme
 
-        $ ./symfony propel:generate-admin --theme="bootstrap" app_name ModelName
+        $ ./symfony propel:generate-admin --theme="bootstrap" application_name ModelName
 
 Bonus
 -----

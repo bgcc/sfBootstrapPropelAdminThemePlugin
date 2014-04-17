@@ -4,7 +4,7 @@
         <div class="panel-body">
             <?php if ($sf_user->hasFlash('error')): ?>
                 <p class="text-danger form-text">
-                    <p><?php echo $sf_user->getFlash('error'); ?></p>
+                    <?php echo $sf_user->getFlash('error'); ?>
                 </p>
             <?php endif; ?>
 

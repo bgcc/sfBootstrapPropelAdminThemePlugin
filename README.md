@@ -50,7 +50,7 @@ Installation via Composer
 ```json
 {
     "require": {
-        "bgcc/sf-bootstrap-propel-admin-theme-plugin": "~1.0"
+        "bgcc/sf-bootstrap-propel-admin-theme-plugin": "dev-master"
     }
 }
 ```

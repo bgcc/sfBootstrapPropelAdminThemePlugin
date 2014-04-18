@@ -54,7 +54,7 @@
             });
         });
 
-        $('.tab-content').find('.form-error-message, .text-danger').parents('.tab-pane').each(function() {
+        $('.tab-content').find('.form-error-message').parents('.tab-pane').each(function() {
             $('#form_tabs a[href="#' + $(this).attr('id') + '"] span').addClass('text-danger');
             $('#form_tabs a[href="#' + $(this).attr('id') + '"] span i').addClass('fa fa-exclamation');
         });

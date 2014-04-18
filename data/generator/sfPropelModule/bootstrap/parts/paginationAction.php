@@ -50,7 +50,7 @@
         <?php if ($this->configuration->hasFilterForm()): ?>
         $f = $this->getFilters();
         $query->_if(isset($f['with_chosen_datasets']) && $f['with_chosen_datasets'] == true)
-            ->filterBy($query->getPrimaryKeyPhpName(), $this->helper->getBatchIds(), Criteria::IN)
+            ->filterByPrimaryKeys($this->helper->getBatchIds())
         ->_endif();
         <?php endif; ?>
 
@@ -72,7 +72,7 @@
         $this->forward404Unless($obj = $this->getRoute()->getObject());
 
         $q = $this->buildQuery();
-        $rs = $q->select($q->getPrimaryKeyPhpName())->find();
+        $rs = $q->select($this->getPrimaryKeyPhpName($q))->find();
         $pos = $rs->search((string) $obj->getPrimaryKey());
         $this->forward404Unless($pos !== false);
 
@@ -92,7 +92,7 @@
         $this->forward404Unless($obj = $this->getRoute()->getObject());
 
         $q = $this->buildQuery();
-        $rs = $q->select($q->getPrimaryKeyPhpName())->find();
+        $rs = $q->select($this->getPrimaryKeyPhpName($q))->find();
         $pos = $rs->search((string) $obj->getPrimaryKey());
         $this->forward404Unless($pos !== false);
 
@@ -107,4 +107,16 @@
 
             $this->redirect('@<?php echo $this->getUrlForAction('edit') ?>?id='.$obj->getId());
         }
+    }
+
+    private function getPrimaryKeyPhpName($q)
+    {
+        $pks = $q->getTableMap()->getPrimaryKeys();
+        $return = array();
+
+        foreach ($pks as $pk) {
+            $return[] = $pk->getPhpName();
+        }
+
+        return count($return) === 1 ? $return[0] : $return;
     }

@@ -1,16 +1,22 @@
 <?php
-class sfWidgetFormBootstrap3I18nNumber extends sfWidgetFormI18nNumber
+class sfWidgetFormBootstrap3I18nNumber extends sfWidgetFormInput
 {
     protected function configure($options = array(), $attributes = array())
     {
-        parent::configure();
+        parent::configure($options, $attributes);
 
+        $this->addOption('culture', $this->_current_language());
         $this->addOption('prepend');
         $this->addOption('append');
     }
 
     public function render($name, $value = null, $attributes = array(), $errors = array())
     {
+        if (is_numeric($value) && !is_null($value)) {
+            $numberFormat = new sfNumberFormat($this->getOption('culture'));
+            $value = $numberFormat->format($value);
+        }
+
         $input = parent::render($name, $value, $attributes, $errors);
 
         $prepend = '';
@@ -31,5 +37,14 @@ class sfWidgetFormBootstrap3I18nNumber extends sfWidgetFormI18nNumber
         $html .= '</div>';
 
         return $html;
+    }
+    
+    function _current_language()
+    {
+        try {
+            return sfContext::getInstance()->getUser()->getCulture();
+        } catch (Exception $e) {
+            return sfCultureInfo::getInstance()->getName();
+        }
     }
 }

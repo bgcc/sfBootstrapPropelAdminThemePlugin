@@ -29,13 +29,14 @@ generator:
         actions:                                                                                                        # Override list_actions from settings.yml
           _new:       ~
           sort:       { label: Sort, action: sort, params: { icon_class: 'fa fa-sort', class: 'btn btn-default' }}      # Sample for custom list action
-        #batch_actions:                                                                                                 # Override batch_actions from settings.yml
-        #  _delete:    ~
-        #object_actions:                                                                                                # Override object_actions from settings.yml
-        #  _edit:      ~
-        #  _delete:    ~
-        #  _move_up:   ~
-        #  _move_down: ~
+        batch_actions:                                                                                                  # Override batch_actions from settings.yml
+          _delete:    ~
+        object_actions:                                                                                                 # Override object_actions from settings.yml
+          _edit:      ~
+          _delete:    ~
+          _move_up:   ~
+          _move_down: ~
+          _sort:    { label: Sort, action: sort_items, params: { icon_class: 'fa fa-sort', class: 'btn btn-default btn-xs' } }  # Sample for custom object action
 
       filter:
         display:            [ field1, field2, field3, field4, field5 ]

@@ -27,7 +27,7 @@
         [?php include_partial('<?php echo $this->getModuleName() ?>/list_batch_actions', array('helper' => $helper)); ?]
     </div>
 
-    <div class="pull-right">
+    <div class="pull-right form-inline">
         [?php include_partial('<?php echo $this->getModuleName() ?>/list_max_per_page', array('helper' => $helper, 'configuration' => $configuration, 'value' => $pager->getMaxPerPage())) ?]
         [?php include_partial('<?php echo $this->getModuleName() ?>/list_actions', array('helper' => $helper)) ?]
     </div>

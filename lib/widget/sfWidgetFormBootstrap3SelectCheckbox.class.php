@@ -79,7 +79,7 @@ class sfWidgetFormBootstrap3SelectCheckbox extends sfWidgetFormChoiceBase
                 'id'    => $id = $this->generateId($name, self::escapeOnce($key)),
             );
 
-            if (strval($key) == strval($value === false ? 0 : $value)) {
+            if ((is_array($value) && in_array(strval($key), $value)) || (is_string($value) && strval($key) == strval($value))) {
                 $baseAttributes['checked'] = 'checked';
             }
 

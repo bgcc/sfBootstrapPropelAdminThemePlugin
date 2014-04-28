@@ -73,7 +73,7 @@ class sfWidgetFormBootstrap3SelectCheckbox extends sfWidgetFormChoiceBase
 
         foreach ($choices as $key => $option) {
             $baseAttributes = array(
-                'name'  => substr($name, 0, -2),
+                'name'  => $name,
                 'type'  => 'checkbox',
                 'value' => self::escapeOnce($key),
                 'id'    => $id = $this->generateId($name, self::escapeOnce($key)),

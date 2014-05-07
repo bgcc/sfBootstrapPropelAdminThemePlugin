@@ -24,7 +24,13 @@ abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper 
             $params['action'] = 'moveUp';
         }
 
-        return link_to('<i class="fa fa-chevron-up"></i> ' . __($params['label'], array(), 'sf_admin'), '<?php echo $this->params['moduleName'] ?>/' . $params['action'] . '?<?php echo $this->getPrimaryKeyUrlParams('$object', true); ?>, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => 'btn btn-default btn-xs'));
+        if (isset($params['for_dropdown']) && $params['for_dropdown'] == true) {
+            $class = 'btn-xs';
+        } else {
+            $class = 'btn btn-default btn-xs';
+        }
+
+        return link_to('<i class="fa fa-chevron-up"></i> ' . __($params['label'], array(), 'sf_admin'), '<?php echo $this->params['moduleName'] ?>/' . $params['action'] . '?<?php echo $this->getPrimaryKeyUrlParams('$object', true); ?>, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => $class));
     }
 
     public function linkToMoveDown($object, $params)
@@ -37,7 +43,13 @@ abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper 
             $params['action'] = 'moveDown';
         }
 
-        return link_to('<i class="fa fa-chevron-down"></i> ' . __($params['label'], array(), 'sf_admin'), '<?php echo $this->params['moduleName'] ?>/' . $params['action'] . '?<?php echo $this->getPrimaryKeyUrlParams('$object', true); ?>, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => 'btn btn-default btn-xs'));
+        if (isset($params['for_dropdown']) && $params['for_dropdown'] == true) {
+            $class = 'btn-xs';
+        } else {
+            $class = 'btn btn-default btn-xs';
+        }
+
+        return link_to('<i class="fa fa-chevron-down"></i> ' . __($params['label'], array(), 'sf_admin'), '<?php echo $this->params['moduleName'] ?>/' . $params['action'] . '?<?php echo $this->getPrimaryKeyUrlParams('$object', true); ?>, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => $class));
     }
 
     public function linkToNew($params)
@@ -47,7 +59,13 @@ abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper 
 
     public function linkToEdit($object, $params)
     {
-        return link_to('<i class="fa fa-pencil"></i> ' . __($params['label'], array(), 'sf_admin'), $this->getUrlForAction('edit'), $object, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => 'btn btn-primary btn-xs'));
+        if (isset($params['for_dropdown']) && $params['for_dropdown'] == true) {
+            $class = 'btn-xs';
+        } else {
+            $class = 'btn btn-primary btn-xs';
+        }
+
+        return link_to('<i class="fa fa-pencil"></i> ' . __($params['label'], array(), 'sf_admin'), $this->getUrlForAction('edit'), $object, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => $class));
     }
 
     public function linkToSave($object, $params)
@@ -84,7 +102,13 @@ abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper 
             return '';
         }
 
-        return link_to('<i class="fa fa-trash-o"></i> ' . __($params['label'], array(), 'sf_admin'), $this->getUrlForAction('delete'), $object, array('method' => 'delete', 'title' => __($params['label'], array(), 'sf_admin'), 'class' => 'btn btn-danger btn-xs', 'confirm' => !empty($params['confirm']) ? __($params['confirm'], array(), 'sf_admin') : $params['confirm']));
+        if (isset($params['for_dropdown']) && $params['for_dropdown'] == true) {
+            $class = 'btn-xs';
+        } else {
+            $class = 'btn btn-danger btn-xs';
+        }
+
+        return link_to('<i class="fa fa-trash-o"></i> ' . __($params['label'], array(), 'sf_admin'), $this->getUrlForAction('delete'), $object, array('method' => 'delete', 'title' => __($params['label'], array(), 'sf_admin'), 'class' => $class, 'confirm' => !empty($params['confirm']) ? __($params['confirm'], array(), 'sf_admin') : $params['confirm']));
     }
 
     public function linkToAction($params)
@@ -106,6 +130,10 @@ abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper 
 
         if (empty($link_params['class'])) {
             $link_params['class'] = 'btn btn-default btn-xs';
+        }
+
+        if (isset($params['for_dropdown']) && $params['for_dropdown'] == true) {
+            $link_params['class'] = 'btn-xs';
         }
 
         return link_to((isset($link_params['icon_class']) ? '<i class="' . $link_params['icon_class'] . '"></i> ' : '') . __($params['label'], array(), 'sf_admin'), '<?php echo $this->params['moduleName'] ?>/' . $params['action'] . '?<?php echo $this->getPrimaryKeyUrlParams('$object', true); ?>, array('title' => __($params['label'], array(), 'sf_admin'), 'class' => $link_params['class']));

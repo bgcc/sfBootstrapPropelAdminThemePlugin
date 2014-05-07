@@ -39,23 +39,3 @@
         </div>
     </div>
 </td>
-
-<?php /*
-<td class="xtext-right">
-    <div class="hidden-xs hidden-sm">
-        <?php echo $helper->linkToEdit($article, array(  'params' =>   array(  ),  'class_suffix' => 'edit',  'label' => 'Edit',)) ?>
-        <?php echo $helper->linkToListDelete($article, array(  'params' =>   array(  ),  'confirm' => 'Are you sure?',  'class_suffix' => 'delete',  'label' => 'Delete',)) ?>
-    </div>
-    <div class="xhidden-md xhidden-lg">
-        <div class="btn-group">
-            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                Actions <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Dropdown link</a></li>
-                <li><a href="#">Dropdown link</a></li>
-            </ul>
-        </div>
-    </div>
-</td>
-*/; ?>

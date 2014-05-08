@@ -90,6 +90,31 @@ Setup
 
         $ ./symfony propel:generate-admin --theme="bootstrap" application_name ModelName
 
+Included Widgets
+-----
+  * `sfWidgetFormBootstrap3I18nNumber`: Input widget with an optional input-group that formats the number based on a given culture.
+
+  * `sfWidgetFormBootstrap3Input`: Input widget with an optional input-group that formats the number based on a given culture.
+
+  * `sfWidgetFormBootstrap3SelectCheckbox`: Renderer class for expandend multiple choice widgets. Usage:
+    ``` php
+    $this->setWidget('widget_name', new sfWidgetFormChoice(array(
+        'choices'        => $choices,
+        'expanded'       => true,
+        'multiple'       => true,
+        'renderer_class' => 'sfWidgetFormBootstrap3SelectCheckbox'
+    )));
+    ```
+
+  * `sfWidgetFormBootstrap3SelectRadio`: Renderer class for expandend choice widgets. Usage:
+    ``` php
+    $this->setWidget('widget_name', new sfWidgetFormChoice(array(
+        'choices'        => $choices,
+        'expanded'       => true,
+        'renderer_class' => 'sfWidgetFormBootstrap3SelectRadio'
+    )));
+    ```
+
 Bonus
 -----
   * Check the `signinSuccess.php` in `plugins/sfBootstrapPropelAdminThemePlugin/modules/theme/templates` for a nice login page. Copy the content to the template of your signin action and modify it if it's necessary.

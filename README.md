@@ -93,10 +93,16 @@ Setup
 Included Widgets
 -----
   * `sfWidgetFormBootstrap3I18nNumber`: Input widget with an optional input-group that formats the number based on a given culture.
+    ``` php
+    $this->setWidget('widget_name', new sfWidgetFormBootstrap3I18nNumber(array('culture' => 'de', 'prepend' => '€')));
+    ```
 
   * `sfWidgetFormBootstrap3Input`: Input widget with an optional input-group that formats the number based on a given culture.
+    ``` php
+    $this->setWidget('widget_name', new sfWidgetFormBootstrap3Input(array('append' => '€')));
+    ```
 
-  * `sfWidgetFormBootstrap3SelectCheckbox`: Renderer class for expandend multiple choice widgets. Usage:
+  * `sfWidgetFormBootstrap3SelectCheckbox`: Renderer class for expandend multiple choice widgets.
     ``` php
     $this->setWidget('widget_name', new sfWidgetFormChoice(array(
         'choices'        => $choices,
@@ -106,7 +112,7 @@ Included Widgets
     )));
     ```
 
-  * `sfWidgetFormBootstrap3SelectRadio`: Renderer class for expandend choice widgets. Usage:
+  * `sfWidgetFormBootstrap3SelectRadio`: Renderer class for expandend choice widgets.
     ``` php
     $this->setWidget('widget_name', new sfWidgetFormChoice(array(
         'choices'        => $choices,

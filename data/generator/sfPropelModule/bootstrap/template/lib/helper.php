@@ -204,6 +204,6 @@ abstract class Base<?php echo ucfirst($this->getModuleName()) ?>GeneratorHelper 
 
     public function getMaxPerPage()
     {
-        return sfContext::getInstance()->getUser()->getAttribute('<?php echo $this->getModuleName() ?>.max_per_page', '', 'admin_module');
+        return sfContext::getInstance()->getUser()->getAttribute('<?php echo $this->getModuleName() ?>.max_per_page', sfConfig::get('sf_sfBootstrapPropelAdminTheme_max_per_page'), 'admin_module');
     }
 }

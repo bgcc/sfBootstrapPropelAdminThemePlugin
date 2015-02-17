@@ -15,7 +15,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body class="login">
+    <body>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 main">

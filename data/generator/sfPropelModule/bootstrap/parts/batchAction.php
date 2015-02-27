@@ -12,7 +12,8 @@
     public function executeRemoteBatchAll(sfWebRequest $request)
     {
         if ($request->getParameter('checked') == 'true') {
-            $this->helper->setBatchIds($request->getParameter('ids'));
+            $q = $this->buildQuery();
+            $this->helper->setBatchIds($q->select($q->getPrimaryKeyPhpName())->find()->toArray());
         } else {
             $this->helper->setBatchIds(array());
         }

@@ -13,7 +13,9 @@
     {
         if ($request->getParameter('checked') == 'true') {
             $q = $this->buildQuery();
-            $this->helper->setBatchIds($q->select($q->getPrimaryKeyPhpName())->find()->toArray());
+            $phpName = $this->getPrimaryKeyPhpName($q);
+            $q->clearSelectColumns();
+            $this->helper->setBatchIds($q->select($phpName)->find()->toArray());
         } else {
             $this->helper->setBatchIds(array());
         }

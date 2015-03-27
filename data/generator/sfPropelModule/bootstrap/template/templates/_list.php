@@ -69,8 +69,6 @@ function checkAll()
     $('input[type="checkbox"].sf_admin_batch_checkbox').each(function() {
         var ele = $(this);
 
-        console.log(ele);
-
         if (checked) {
             ele.prop('checked', true);
 

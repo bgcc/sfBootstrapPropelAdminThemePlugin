@@ -27,6 +27,14 @@
                 [?php empty($attributes['class']) ? $attributes['class'] = 'form-control' : $attributes['class'] .= 'form-control'; ?]
             [?php endif; ?]
 
+            [?php if (isset($attributes['class'])): ?]
+                [?php $widget_attributes = $form[$name]->getWidget()->getAttributes(); ?]
+
+                [?php if (isset($widget_attributes['class'])): ?]
+                    [?php $attributes['class'] .= ' ' . $widget_attributes['class']; ?]
+                [?php endif; ?]
+            [?php endif; ?]
+
             [?php echo $form[$name]->render($attributes); ?]
 
             [?php if (stristr(get_class($form[$name]->getWidget()), 'checkbox')): ?]

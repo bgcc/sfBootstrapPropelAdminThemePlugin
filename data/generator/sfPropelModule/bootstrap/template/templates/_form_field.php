@@ -53,7 +53,7 @@
         <div class="col-sm-4">
             [?php if ($form[$name]->hasError()): ?]
                 <p class="form-error-message text-danger form-text">
-                    [?php echo $form[$name]->getError(); ?]
+                    [?php echo __($form[$name]->getError()); ?]
                 </p>
             [?php endif; ?]
         </div>
